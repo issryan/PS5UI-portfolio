@@ -67,7 +67,7 @@ function App() {
             </div>
 
             <CrossFader className='play-container' style={{ left: `${CARDS_OFFSET_X * 1.2}px` }}>
-                <h1>{games[active].name}</h1>
+                <h1>{games[active].description}</h1>
                 <button className='play-btn'>Play</button>
             </CrossFader>
         </div>
