@@ -38,7 +38,7 @@ export const games = [
     {
         logo: '/games/tekken.jpeg',
         name: 'Trip Genie',
-        description:"Figma Mockup of an AI-powered travel itenirary planner."
+        description:"Figma Mockup of an AI-powered travel itenirary planner.",
         bg: '/games/tekken_bg.jpeg'
     }
 ];
