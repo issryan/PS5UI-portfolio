@@ -6,6 +6,8 @@ import { GameCardsList } from "../GameCardsList/GameCardsList";
 import { ACTIVE_CARD_GAP, ACTIVE_CARD_SIZE, CARD_SIZE, CARDS_OFFSET_X, CARDS_OFFSET_Y } from "../constants";
 import { games } from "../games";
 import { usePrevious } from "../hooks/use-previous";
+import { useNavigate } from 'react-router-dom';
+
 
 // Sound files setup
 const navigateSound = new Howl({
@@ -27,6 +29,8 @@ const backgroundMusic = new Howl({
 function App() {
     const [active, setActive] = useState(0);
     const prevActive = usePrevious(active);
+    const navigater = useNavigate();
+
 
     useEffect(() => {
         loadSound.play();
@@ -39,6 +43,29 @@ function App() {
         }
         navigateSound.play();
         setActive(index);
+    };
+
+    const handlePlayClick = () => {
+        const selectedGame = games[active];
+
+        // Navigate to the appropriate route based on the active game
+        switch (selectedGame.name) {
+            case 'About':
+                navigater('/about');
+                break;
+            case 'Gallery':
+                navigater('/gallery');
+                break;
+            case 'Resume':
+                navigater('/resume');
+                break;
+            case 'Flick':
+                navigater('/flick-details');
+                break;
+            default:
+                console.warn('Unknown app selected');
+                break;
+        }
     };
 
     const textOffsetX = CARDS_OFFSET_X + ACTIVE_CARD_SIZE + ACTIVE_CARD_GAP + 12;
@@ -68,7 +95,7 @@ function App() {
 
             <CrossFader className='play-container' style={{ left: `${CARDS_OFFSET_X * 1.2}px` }}>
                 <h1>{games[active].description}</h1>
-                <button className='play-btn'>Play</button>
+                <button className='play-btn' onClick={handlePlayClick}>Play</button>
             </CrossFader>
         </div>
     );

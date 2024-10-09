@@ -1,44 +1,44 @@
 export const games = [
     {
-        logo: '/games/fortnite.jpeg',
+        logo: '',
         name: 'About',
         description: 'Learn More About Me',
-        bg: '/games/fortnite_bg.jpeg'
+        bg: ''
     },
     {
-        logo: '/games/rdr2.jpeg',
+        logo: '/games/galleryIcon.png',
         name: 'Gallery',
         description: 'See some of my favorite pictures',
-        bg: '/games/rdr2_bg.jpeg'
+        bg: ''
     },
     {
-        logo: '/games/skyrim.webp',
+        logo: '',
         name: 'Resume',
         description: 'Resume',
-        bg: '/games/skyrim_bg.jpeg'
+        bg: ''
     },
     {
-        logo: '/games/witcher3.jpeg',
+        logo: '',
         name: 'Flick',
         description: 'A Social Media App',
-        bg: '/games/witcher3_bg.webp'
+        bg: ''
     },
     {
-        logo: '/games/uncharted.jpeg',
+        logo: '',
         name: 'Shift',
         description: 'A shift scheduling web app with conflict detection and employee availability features.',
-        bg: '/games/uncharted_bg.jpeg'
+        bg: ''
     },
     {
-        logo: '/games/spiderman.jpeg',
+        logo: '',
         name: 'Breed Finder',
         description: 'An AI-powered app to identify dog breeds using machine learning.',
-        bg: '/games/spiderman_bg.webp'
+        bg: ''
     },
     {
-        logo: '/games/tekken.jpeg',
+        logo: '',
         name: 'Trip Genie',
         description:"Figma Mockup of an AI-powered travel itenirary planner.",
-        bg: '/games/tekken_bg.jpeg'
+        bg: ''
     }
 ];
