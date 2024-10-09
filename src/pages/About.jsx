@@ -2,212 +2,105 @@ import React from 'react';
 import './About.scss'; 
 import checkmark from '/games/checkmark.png'; 
 import { FaLinkedin, FaGithub } from 'react-icons/fa'; 
-import { MdEmail, MdLocationOn, MdSchool } from 'react-icons/md'; 
+import { MdEmail, MdLocationOn, MdSchool, MdArrowBack } from 'react-icons/md'; 
+import { useNavigate } from 'react-router-dom'; 
 
 const About = () => {
-  const [aboutRef, isAboutVisible] = useScrollAnimation();
+  const navigate = useNavigate();  
 
   return (
-    <section
-      ref={aboutRef}
-      className={`about-section ${isAboutVisible ? 'fade-in' : 'preview'}`}
-    >
-      <aside className="sidebar">
-        <div className="sidebar-info">
-          <figure className="avatar-box">
-            <img src="path/to/avatar.png" alt="Ryan Arafeh" width="80" />
-          </figure>
-          <div className="info-content">
-            <h1 className="name" title="Ryan Arafeh">Ryan Arafeh</h1>
-            <p className="title">Software Engineer</p>
-          </div>
-        </div>
+    <section className="about-section">
+      {/* Back Arrow */}
+      <button className="back-arrow" onClick={() => navigate('/')}>
+        <MdArrowBack size={28} />
+      </button>
 
-        <div className="sidebar-info_more">
-          <div className="separator"></div>
+      <div className="about-container">
+        {/* Sidebar */}
+        <aside className="sidebar">
+          <div className="avatar-box">
+            <img src="path/to/avatar.png" alt="Ryan Arafeh" />
+          </div>
+          <h1 className="name">Ryan Arafeh</h1>
+          <p className="title">Software Engineer</p>
+
           <ul className="contacts-list">
             <li className="contact-item">
-              <div className="icon-box">
-                <MdEmail size={20} /> 
-              </div>
-              <div className="contact-info">
-                <p className="contact-title">Email</p>
-                <a href="mailto:arafehryan@gmail.com" className="contact-link">arafehryan@gmail.com</a>
-              </div>
+              <MdEmail size={20} className="icon" />
+              <a href="mailto:arafehryan@gmail.com">arafehryan@gmail.com</a>
             </li>
             <li className="contact-item">
-              <div className="icon-box">
-                <MdLocationOn size={20} /> 
-              </div>
-              <div className="contact-info">
-                <p className="contact-title">Location</p>
-                <address>Toronto, Ontario, Canada</address>
-              </div>
+              <MdLocationOn size={20} className="icon" />
+              <address>Toronto, Ontario, Canada</address>
             </li>
             <li className="contact-item">
-              <div className="icon-box">
-                <MdSchool size={20} /> 
-              </div>
-              <div className="contact-info">
-                <p className="contact-title">Education</p>
-                <address>Software Engineering Technology</address>
-                <address>@Centennial College</address>
-              </div>
+              <MdSchool size={20} className="icon" />
+              <address>Software Engineering Technology @Centennial College</address>
             </li>
           </ul>
 
-          <div className="separator"></div>
-          <ul className="social-list">
-            <li className="social-item">
-              <a href="https://www.linkedin.com/in/ryanarafeh/" className="social-link">
-                <FaLinkedin size={20} /> 
-              </a>
-            </li>
-            <li className="social-item">
-              <a href="https://github.com/issryan" className="social-link">
-                <FaGithub size={20} /> ¸
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-
-      <article className="about-main">
-        <header>
-          <h2 className="article-title">About Me</h2>
-        </header>
-        <section className="about-text">
-          <p>
-            I'm a Software Engineering student navigating the coding maze. Currently knee-deep in algorithms and projects, I'm on a mission to make tech as cool as it can get. When I'm not wrestling with code, you'll catch me snapping pics of my daily adventures. From the hustle of the city to the chill vibes of nature, my camera's always ready. Right now, I'm gearing up to dive into the world of either data analysis or web development. Currently on the lookout for an internship, so if you've got exciting projects and a spot on your team, I'm all ears. Let's connect and explore the exciting intersections of code and creativity!
-          </p>
-        </section>
-
-        <section className="service">
-          <h3 className="service-title">Skills</h3>
-          <div className="experience-details-container">
-            <div className="details-container">
-              <h2 className="experience-sub-title">Frontend Development</h2>
-              <div className="article-container">
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>HTML</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>CSS</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>JavaScript</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>React</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>Bootstrap</h3>
-                    <p>Basic</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div className="details-container">
-              <h2 className="experience-sub-title">Backend Development</h2>
-              <div className="article-container">
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>Python</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>SQL</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>MongoDB</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>Github</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>Node.js</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img src={checkmark} alt="Experience icon" className="icon" />
-                  <div>
-                    <h3>Express.js</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-              </div>
-            </div>
+          <div className="social-list">
+            <a href="https://www.linkedin.com/in/ryanarafeh/" className="social-link">
+              <FaLinkedin size={24} />
+            </a>
+            <a href="https://github.com/issryan" className="social-link">
+              <FaGithub size={24} />
+            </a>
           </div>
-        </section>
+        </aside>
 
-        <section className="service">
-          <h3 className="service-title">Hobbies</h3>
-          <ul className="service-list">
-            <li className="service-item">
-              <div className="service-icon-box">
-                <img src="path/to/icon-design.svg" alt="design icon" />
+        {/* Main Section */}
+        <div className="about-main">
+          <h2>About Me</h2>
+          <p>
+            I'm a Software Engineering student navigating the coding maze. Currently knee-deep in algorithms and projects, I'm on a mission to make tech as cool as it can get. When I'm not wrestling with code, you'll catch me snapping pics of my daily adventures...
+          </p>
+
+          <section className="skills-section">
+            <h3>Skills</h3>
+            <div className="skill-group">
+              <div className="skill-category">
+                <h4>Frontend Development</h4>
+                <ul className="skills-list">
+                  <li><img src={checkmark} alt="Checkmark" /> HTML - Experienced</li>
+                  <li><img src={checkmark} alt="Checkmark" /> CSS - Experienced</li>
+                  <li><img src={checkmark} alt="Checkmark" /> JavaScript - Intermediate</li>
+                  <li><img src={checkmark} alt="Checkmark" /> React - Intermediate</li>
+                </ul>
               </div>
-              <div className="service-content-box">
-                <h4 className="service-item-title">Photography</h4>
-                <p className="service-item-text">Small paragraph here.</p>
+              <div className="skill-category">
+                <h4>Backend Development</h4>
+                <ul className="skills-list">
+                  <li><img src={checkmark} alt="Checkmark" /> Python - Intermediate</li>
+                  <li><img src={checkmark} alt="Checkmark" /> SQL - Intermediate</li>
+                  <li><img src={checkmark} alt="Checkmark" /> MongoDB - Intermediate</li>
+                </ul>
               </div>
-            </li>
-            <li className="service-item">
-              <div className="service-icon-box">
-                <img src="path/to/icon-design.svg" alt="design icon" />
+            </div>
+          </section>
+
+          <section className="hobbies-section">
+            <h3>Hobbies</h3>
+            <div className="hobbies-list">
+              <div className="hobby">
+                <img src="path/to/icon-design.svg" alt="Design Icon" />
+                <h4>Photography</h4>
+                <p>Small paragraph here.</p>
               </div>
-              <div className="service-content-box">
-                <h4 className="service-item-title">Graphic Design</h4>
-                <p className="service-item-text">Small paragraph here.</p>
+              <div className="hobby">
+                <img src="path/to/icon-design.svg" alt="Design Icon" />
+                <h4>Graphic Design</h4>
+                <p>Small paragraph here.</p>
               </div>
-            </li>
-            <li className="service-item">
-              <div className="service-icon-box">
-                <img src="path/to/icon-design.svg" alt="design icon" />
+              <div className="hobby">
+                <img src="path/to/icon-design.svg" alt="Design Icon" />
+                <h4>Biking</h4>
+                <p>Small paragraph here.</p>
               </div>
-              <div className="service-content-box">
-                <h4 className="service-item-title">Biking</h4>
-                <p className="service-item-text">Small paragraph here.</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </article>
+            </div>
+          </section>
+        </div>
+      </div>
     </section>
   );
 };
