@@ -41,7 +41,7 @@ const LandingPage = () => {
                 <div className="profile guest" onClick={handleGuestClick}>
                     <div className="circle">
                         <img
-                            src="/icons/profile.png" // Replace 'guest-icon.png' with the actual name of your icon
+                            src="/icons/profile.png" 
                             alt="Guest Icon"
                             className="icon-img"
                         />
