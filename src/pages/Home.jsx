@@ -7,6 +7,8 @@ import { ACTIVE_CARD_GAP, ACTIVE_CARD_SIZE, CARD_SIZE, CARDS_OFFSET_X, CARDS_OFF
 import { games } from "../games";
 import { usePrevious } from "../hooks/use-previous";
 import About from "./About";
+import Gallery from "./Gallery";
+import Navbar from './Navbar';
 
 // Sound files setup
 const navigateSound = new Howl({
@@ -49,6 +51,7 @@ function App() {
             '--active-card-size': `${ACTIVE_CARD_SIZE}px`,
             '--card-size': `${CARD_SIZE}px`,
         }}>
+            <Navbar />
             {/* Background */}
             <CrossFader destroyOnFadeOutComplete={false} className={'game-bg-container ' + (isNext ? 'next' : 'prev')}>
                 <div className='game-bg' style={{ backgroundImage: `url("${games[active].bg ?? games[active].logo}")` }}></div>
@@ -69,13 +72,12 @@ function App() {
             <div className="dynamic-content">
                 {games[active].name === 'About' && (
                     <div className="dynamic-section">
-                        <About/>
+                        <About />
                     </div>
                 )}
                 {games[active].name === 'Gallery' && (
                     <div className="dynamic-section">
-                        <h2>Gallery</h2>
-                        <img src="/games/galleryIcon.png" alt="Gallery" className="dynamic-img" />
+                        <Gallery />
                     </div>
                 )}
                 {games[active].name === 'Resume' && (
