@@ -13,20 +13,14 @@ export const games = [
     },
     {
         logo: '',
-        name: 'Resume',
-        description: 'Resume',
+        name: 'BingeBuddy',
+        description: 'TV Show Tracker & Rater',
         bg: ''
     },
     {
         logo: '',
         name: 'Flick',
-        description: 'A Social Media App',
-        bg: ''
-    },
-    {
-        logo: '',
-        name: 'Shift',
-        description: 'A shift scheduling web app with conflict detection and employee availability features.',
+        description: 'Mini Social Media App',
         bg: ''
     },
     {
@@ -37,8 +31,8 @@ export const games = [
     },
     {
         logo: '',
-        name: 'Trip Genie',
-        description:"Figma Mockup of an AI-powered travel itenirary planner.",
+        name: 'Shift Happens',
+        description:"In Development",
         bg: ''
     }
 ];
