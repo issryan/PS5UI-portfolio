@@ -1,0 +1,104 @@
+// Variables
+$primary-bg: radial-gradient(circle, rgba(20, 20, 20, 1) 50%, rgba(10, 10, 10, 1) 100%);
+$circle-size: 150px;
+
+// General Styles
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: $primary-bg;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+// Landing Page Container
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // Centers vertically
+  align-items: center; // Centers horizontally
+  height: 100vh; // Full viewport height
+  width: 100vw; // Full viewport width
+  text-align: center;
+  margin: 0 auto;
+  position: relative; // For positioning child elements
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem; // Adjusted for spacing
+    font-weight: 300;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  // Profiles Section
+  .profiles {
+    display: flex;
+    justify-content: center; // Centers profiles horizontally
+    align-items: center; // Ensures profiles are vertically aligned
+    gap: 5rem; // Space between the profiles
+    margin: 0 auto;
+
+    .profile {
+      text-align: center;
+      cursor: pointer;
+
+      .circle {
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        // Icon for Guest
+        .icon {
+          font-size: 2rem;
+          color: white;
+        }
+
+        // Profile Image for Ryan
+        .profile-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+
+  // Footer
+  .footer {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
