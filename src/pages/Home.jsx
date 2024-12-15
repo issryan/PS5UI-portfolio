@@ -6,8 +6,7 @@ import { GameCardsList } from "../GameCardsList/GameCardsList";
 import { ACTIVE_CARD_GAP, ACTIVE_CARD_SIZE, CARD_SIZE, CARDS_OFFSET_X, CARDS_OFFSET_Y } from "../constants";
 import { games } from "../games";
 import { usePrevious } from "../hooks/use-previous";
-import { useNavigate } from 'react-router-dom';
-
+import About from "./About";
 
 // Sound files setup
 const navigateSound = new Howl({
@@ -29,8 +28,6 @@ const backgroundMusic = new Howl({
 function App() {
     const [active, setActive] = useState(0);
     const prevActive = usePrevious(active);
-    const navigater = useNavigate();
-
 
     useEffect(() => {
         loadSound.play();
@@ -38,34 +35,9 @@ function App() {
     }, []);
 
     const navigate = (index) => {
-        if (index === active) {
-            return;
-        }
+        if (index === active) return;
         navigateSound.play();
         setActive(index);
-    };
-
-    const handlePlayClick = () => {
-        const selectedGame = games[active];
-
-        // Navigate to the appropriate route based on the active game
-        switch (selectedGame.name) {
-            case 'About':
-                navigater('/about');
-                break;
-            case 'Gallery':
-                navigater('/gallery');
-                break;
-            case 'Resume':
-                navigater('/resume');
-                break;
-            case 'Flick':
-                navigater('/flick-details');
-                break;
-            default:
-                console.warn('Unknown app selected');
-                break;
-        }
     };
 
     const textOffsetX = CARDS_OFFSET_X + ACTIVE_CARD_SIZE + ACTIVE_CARD_GAP + 12;
@@ -73,30 +45,52 @@ function App() {
     const isNext = active > (prevActive ?? 0);
 
     return (
-        <div className='ps5-container' style={
-            {
-                '--active-card-size': `${ACTIVE_CARD_SIZE}px`,
-                '--card-size': `${CARD_SIZE}px`,
-            }
-        }>
+        <div className='ps5-container' style={{
+            '--active-card-size': `${ACTIVE_CARD_SIZE}px`,
+            '--card-size': `${CARD_SIZE}px`,
+        }}>
+            {/* Background */}
             <CrossFader destroyOnFadeOutComplete={false} className={'game-bg-container ' + (isNext ? 'next' : 'prev')}>
-                <div className='game-bg' style={{ backgroundImage: `url("${games[active].bg ?? games[active].logo}")` }}>
-                </div>
+                <div className='game-bg' style={{ backgroundImage: `url("${games[active].bg ?? games[active].logo}")` }}></div>
             </CrossFader>
 
+            {/* Game List */}
             <div className='games-list-container'>
                 <GameCardsList games={games} activeIndex={active} onActiveIndexChange={navigate} />
             </div>
 
+            {/* Game Title */}
             <div className='game-card-title'
-                 style={{ position: 'absolute', transform: `translateX(${textOffsetX}px) translateY(${textOffsetY}px)` }}>
+                style={{ position: 'absolute', transform: `translateX(${textOffsetX}px) translateY(${textOffsetY}px)` }}>
                 <CrossFader><span>{games[active].name}</span></CrossFader>
             </div>
 
-            <CrossFader className='play-container' style={{ left: `${CARDS_OFFSET_X * 1.2}px` }}>
-                <h1>{games[active].description}</h1>
-                <button className='play-btn' onClick={handlePlayClick}>Play</button>
-            </CrossFader>
+            {/* Dynamic Content */}
+            <div className="dynamic-content">
+                {games[active].name === 'About' && (
+                    <div className="dynamic-section">
+                        <About/>
+                    </div>
+                )}
+                {games[active].name === 'Gallery' && (
+                    <div className="dynamic-section">
+                        <h2>Gallery</h2>
+                        <img src="/games/galleryIcon.png" alt="Gallery" className="dynamic-img" />
+                    </div>
+                )}
+                {games[active].name === 'Resume' && (
+                    <div className="dynamic-section">
+                        <h2>Resume</h2>
+                        <p>Download my resume to see my experience and skills.</p>
+                    </div>
+                )}
+                {games[active].name === 'Flick' && (
+                    <div className="dynamic-section">
+                        <h2>Flick</h2>
+                        <p>A social media app connecting people through shared moments.</p>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
