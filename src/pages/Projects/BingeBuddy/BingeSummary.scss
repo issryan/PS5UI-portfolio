@@ -1,0 +1,63 @@
+.project-summary {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .project-role {
+            background: #ff6347;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .project-tags {
+        margin: 10px 0;
+
+        span {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            margin-right: 5px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+    }
+
+    .project-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 15px 0;
+    }
+
+    .view-more-btn {
+        background-color: #ff6347;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background 0.3s;
+
+        &:hover {
+            background-color: #e5533d;
+        }
+    }
+}

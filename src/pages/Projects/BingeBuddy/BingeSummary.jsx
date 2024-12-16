@@ -1,12 +1,12 @@
 import React from 'react';
-import './ProjectSummary.scss';
+import './BingeSummary.scss';
 import { useNavigate } from 'react-router-dom';
 
 export default function ProjectSummary() {
     const navigate = useNavigate();
 
     const handleViewMore = () => {
-        navigate('/projects/bingebuddy'); // Navigate to the detailed page
+        navigate('/bingebuddy');
     };
 
     return (

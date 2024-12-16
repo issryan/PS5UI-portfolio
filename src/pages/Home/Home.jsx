@@ -9,6 +9,7 @@ import { usePrevious } from "../../hooks/use-previous";
 import About from "../About/About";
 import Gallery from "../Gallery/Gallery";
 import Navbar from '../Navbar/Navbar';
+import BingeBuddy from '../Projects/BingeBuddy/BingeSummary';
 
 // Sound files setup
 const navigateSound = new Howl({
@@ -80,10 +81,9 @@ function App() {
                         <Gallery />
                     </div>
                 )}
-                {games[active].name === 'Resume' && (
+                {games[active].name === 'BingeBuddy' && (
                     <div className="dynamic-section">
-                        <h2>Resume</h2>
-                        <p>Download my resume to see my experience and skills.</p>
+                        <BingeBuddy/>
                     </div>
                 )}
                 {games[active].name === 'Flick' && (
