@@ -10,6 +10,7 @@ import About from "../About/About";
 import Gallery from "../Gallery/Gallery";
 import Navbar from '../Navbar/Navbar';
 import BingeBuddy from '../Projects/BingeBuddy/BingeSummary';
+import BreedFinder from '../Projects/BreedFinder/BreedSummary';
 
 // Sound files setup
 const navigateSound = new Howl({
@@ -98,6 +99,11 @@ function App() {
                 {games[active].name === 'BingeBuddy' && (
                     <div className="dynamic-section">
                         <BingeBuddy/>
+                    </div>
+                )}
+                {games[active].name === 'Breed Finder' && (
+                    <div className="dynamic-section">
+                        <BreedFinder/>
                     </div>
                 )}
                 {games[active].name === 'Flick' && (
