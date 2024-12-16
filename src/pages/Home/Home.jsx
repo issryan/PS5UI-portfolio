@@ -2,13 +2,13 @@ import './Home.scss';
 import { useEffect, useState } from 'react';
 import { Howl } from 'howler';
 import { CrossFader } from 'react-cross-fader';
-import { GameCardsList } from "../GameCardsList/GameCardsList";
-import { ACTIVE_CARD_GAP, ACTIVE_CARD_SIZE, CARD_SIZE, CARDS_OFFSET_X, CARDS_OFFSET_Y } from "../constants";
-import { games } from "../games";
-import { usePrevious } from "../hooks/use-previous";
-import About from "./About";
-import Gallery from "./Gallery";
-import Navbar from './Navbar';
+import { GameCardsList } from "../../GameCardsList/GameCardsList";
+import { ACTIVE_CARD_GAP, ACTIVE_CARD_SIZE, CARD_SIZE, CARDS_OFFSET_X, CARDS_OFFSET_Y } from "../../constants";
+import { games } from "../../games";
+import { usePrevious } from "../../hooks/use-previous";
+import About from "../About/About";
+import Gallery from "../Gallery/Gallery";
+import Navbar from '../Navbar/Navbar';
 
 // Sound files setup
 const navigateSound = new Howl({
