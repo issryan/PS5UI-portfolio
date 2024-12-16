@@ -8,8 +8,6 @@ function About() {
 
   return (
     <div className="about-container">
-      {/* Section Header */}
-      <h1>About Me</h1>
 
       {/* Intro */}
       <div className="about-content">

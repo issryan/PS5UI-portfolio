@@ -1,36 +1,62 @@
 import React from 'react';
 import './BingeSummary.scss';
-import { useNavigate } from 'react-router-dom';
+import bingeBuddyImage from '../../../assets/BingeBuddy.png';
 
-export default function ProjectSummary() {
-    const navigate = useNavigate();
-
-    const handleViewMore = () => {
-        navigate('/bingebuddy');
-    };
-
+export default function BingeBuddySummary() {
     return (
         <div className="project-summary">
-            <div className="project-header">
-                <h2>BingeBuddy</h2>
-                <span className="project-role">Full-Stack Development</span>
-            </div>
+            <div className="project-content">
+                {/* Text Section */}
+                <div className="project-text">
+                    <p className="project-description">
+                        BingeBuddy is a TV show rating app that allows users to rate their favorite shows using a 
+                        custom comparison algorithm. The app ensures users can only have one show rated 10/10, 
+                        dynamically ranking other shows accordingly for a curated viewing experience. 
+                        Future updates will include social features, enabling friends to share their ratings 
+                        and discover each other's watchlists.
+                    </p>
 
-            <div className="project-tags">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>MongoDB</span>
-                <span>JavaScript</span>
-                <span>CSS</span>
-            </div>
+                    {/* Tech Stack Labels */}
+                    <div className="tech-stack">
+                        <span className="tech-label">React.js</span>
+                        <span className="tech-label">AWS ECS</span>
+                        <span className="tech-label">DynamoDB</span>
+                        <span className="tech-label">Docker</span>
+                        <span className="tech-label">Apigee</span>
+                        <span className="tech-label">TMDB API</span>
+                        <span className="tech-label">Netlify</span>
+                        <span className="tech-label">Figma</span>
+                    </div>
 
-            <div className="project-description">
-                BingeBuddy is a TV Show Tracker app that allows users to add shows, see what their friends watch, and share ratings effortlessly.
-            </div>
+                    {/* Buttons */}
+                    <div className="project-links">
+                        <a 
+                            href="https://github.com/issryan/BingeBuddy" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="project-btn"
+                        >
+                            View GitHub Repo
+                        </a>
+                        <a 
+                            href="/bingebuddy-details" 
+                            className="project-btn learn-more"
+                        >
+                            Learn More
+                        </a>
+                    </div>
+                </div>
 
-            <button className="view-more-btn" onClick={handleViewMore}>
-                View More
-            </button>
+                {/* Image Section */}
+                <div className="project-image">
+                    <img 
+                        src={bingeBuddyImage} 
+                        alt="BingeBuddy Project" 
+                        loading="lazy" 
+                        className="project-thumbnail"
+                    />
+                </div>
+            </div>
         </div>
     );
 }
