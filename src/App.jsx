@@ -1,10 +1,10 @@
 // App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Gallery from './pages/Gallery';
-import LandingPage from './pages/LandingPage';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Gallery from './pages/Gallery/Gallery';
+import LandingPage from './pages/Landing/LandingPage';
 
 function App() {
   return (
