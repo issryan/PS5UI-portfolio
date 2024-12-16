@@ -24,7 +24,6 @@ export default function BingeBuddySummary() {
                         <span className="tech-label">Docker</span>
                         <span className="tech-label">Apigee</span>
                         <span className="tech-label">TMDB API</span>
-                        <span className="tech-label">Netlify</span>
                         <span className="tech-label">Figma</span>
                     </div>
 

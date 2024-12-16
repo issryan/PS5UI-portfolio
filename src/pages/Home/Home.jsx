@@ -11,6 +11,8 @@ import Gallery from "../Gallery/Gallery";
 import Navbar from '../Navbar/Navbar';
 import BingeBuddy from '../Projects/BingeBuddy/BingeSummary';
 import BreedFinder from '../Projects/BreedFinder/BreedSummary';
+import Flick from "../Projects/Flick/FlickSummary";
+import ShiftHappens from "../Projects/ShiftHappens/ShiftSummary";
 
 // Sound files setup
 const navigateSound = new Howl({
@@ -88,12 +90,12 @@ function App() {
             <div className="dynamic-content">
                 {games[active].name === 'About' && (
                     <div className="dynamic-section">
-                        <About />
+                        <About/>
                     </div>
                 )}
                 {games[active].name === 'Gallery' && (
                     <div className="dynamic-section">
-                        <Gallery />
+                        <Gallery/>
                     </div>
                 )}
                 {games[active].name === 'BingeBuddy' && (
@@ -108,8 +110,12 @@ function App() {
                 )}
                 {games[active].name === 'Flick' && (
                     <div className="dynamic-section">
-                        <h2>Flick</h2>
-                        <p>A social media app connecting people through shared moments.</p>
+                        <Flick/>
+                    </div>
+                )}
+                {games[active].name === 'Shift Happens' && (
+                    <div className="dynamic-section">
+                        <ShiftHappens/>
                     </div>
                 )}
             </div>
