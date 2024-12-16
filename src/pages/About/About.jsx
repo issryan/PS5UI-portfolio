@@ -1,53 +1,84 @@
+import React from 'react';
 import './About.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-function About() {
-  const skills = [
-    "React", "JavaScript", "Python", "Node.js", "MongoDB",
-    "SQL", "HTML", "CSS", "Express.js", "AWS", "Git", "Figma"
-  ];
+export default function About() {
+    return (
+        <div className="about-container">
+            {/* About and Skills side-by-side */}
+            <div className="about-main">
+                {/* About Section */}
+                <div className="about-content">
+                    <p>
+                        Hi! I'm <strong>Ryan</strong> — a software engineer who loves turning fun and creative ideas into reality.
+                        I specialize in building modern web applications with <strong>React</strong> and <strong>Python</strong>, and
+                        I'm currently looking for an <strong>internship</strong> or <strong>entry-level role</strong> to further grow my skills.
+                    </p>
+                    <p>
+                        In my spare time, I enjoy exploring photography, biking through the city, discovering hidden food spots, or playing video games.
+                        Check out my <strong>Gallery</strong> section for some of my work!
+                    </p>
+                </div>
 
-  return (
-    <div className="about-container">
+                {/* Skills Section */}
+                <div className="about-skills">
+                    <div className="skills-section">
+                        <div>
+                            <h3>Frontend</h3>
+                            <div className="skills-list">
+                                <span className="skill-tag">React</span>
+                                <span className="skill-tag">JavaScript</span>
+                                <span className="skill-tag">HTML</span>
+                                <span className="skill-tag">CSS</span>
+                                <span className="skill-tag">TypeScript</span>
+                                <span className="skill-tag">Redux</span>
+                                <span className="skill-tag">Figma</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Backend</h3>
+                            <div className="skills-list">
+                                <span className="skill-tag">Node.js</span>
+                                <span className="skill-tag">Python</span>
+                                <span className="skill-tag">Express</span>
+                                <span className="skill-tag">DynamoDB</span>
+                                <span className="skill-tag">MongoDB</span>
+                                <span className="skill-tag">SQL</span>
+                                <span className="skill-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      {/* Intro */}
-      <div className="about-content">
-        <div className="about-text">
-          <p>
-            Hi! I'm <strong>Ryan</strong> – a software engineer who loves turning fun and creative ideas into reality.
-            I specialize in building modern web applications with <strong>React</strong> and <strong>Python</strong>,
-            and I’m currently looking for an <strong>internship</strong> or <strong>entry-level role</strong> to further grow my skills.
-          </p>
-          <p>
-            Between work and school, I enjoy exploring photography, biking through the city, finding hidden food spots,
-            or playing video games in my spare time. You can also explore my photos in the <strong>Gallery</strong> section!
-          </p>
+            {/* Contact Section */}
+            <div className="about-contact">
+                <h2>Get in touch</h2>
+                <div className="contact-buttons">
+                    <button className="resume-btn">
+                        <a href="/resume.docx" download>
+                            Download Resume
+                        </a>
+                    </button>
+                    <button className="github-btn">
+                        <a href="https://github.com/issryan" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faGithub} /> GitHub
+                        </a>
+                    </button>
+                    <button className="linkedin-btn">
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+                        </a>
+                    </button>
+                    <button className="email-btn">
+                        <a href="mailto:arafehryan@gmail.com">
+                            <FontAwesomeIcon icon={faEnvelope} /> arafehryan@gmail.com
+                        </a>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-
-      {/* Skills Section */}
-      <div className="about-skills">
-        <h2>Skills</h2>
-        <div className="skills-list">
-          {skills.map((skill, index) => (
-            <span key={index} className="skill-tag">{skill}</span>
-          ))}
-        </div>
-      </div>
-
-      {/* Action Buttons */}
-      <div className="about-links">
-        <button className="resume-btn">
-          <a href="/resume.pdf" download="Ryan_Arafeh_Resume">Download Resume</a>
-        </button>
-        <button className="github-btn">
-          <a href="https://github.com/issryan" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </button>
-        <button className="linkedin-btn">
-          <a href="https://www.linkedin.com/in/ryanarafeh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </button>
-      </div>
-    </div>
-  );
+    );
 }
-
-export default About;
