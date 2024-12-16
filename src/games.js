@@ -19,20 +19,20 @@ export const games = [
     },
     {
         logo: '',
-        name: 'Flick',
-        description: 'Mini Social Media App',
-        bg: ''
-    },
-    {
-        logo: '',
         name: 'Breed Finder',
         description: 'An AI-powered app to identify dog breeds using machine learning.',
         bg: ''
     },
     {
         logo: '',
+        name: 'Flick',
+        description: 'Mini Social Media App',
+        bg: ''
+    },
+    {
+        logo: '',
         name: 'Shift Happens',
-        description:"In Development",
+        description: "In Development",
         bg: ''
     }
 ];

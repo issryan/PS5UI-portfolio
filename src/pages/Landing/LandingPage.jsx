@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Landing.scss';
+import GuestProfile from '../../assets/profile.png';
 
 const LandingPage = () => {
     const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
@@ -41,7 +42,7 @@ const LandingPage = () => {
                 <div className="profile guest" onClick={handleGuestClick}>
                     <div className="circle">
                         <img
-                            src="/icons/profile.png" 
+                            src={GuestProfile} 
                             alt="Guest Icon"
                             className="icon-img"
                         />

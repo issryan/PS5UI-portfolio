@@ -39,7 +39,7 @@ export default function BingeBuddySummary() {
                             View GitHub Repo
                         </a>
                         <a 
-                            href="/bingebuddy-details" 
+                            href="/bingebuddy" 
                             className="project-btn learn-more"
                         >
                             Learn More

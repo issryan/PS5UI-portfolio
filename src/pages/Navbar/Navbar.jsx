@@ -23,15 +23,15 @@ export default function Navbar() {
 
     return (
         <div className="navbar">
-            <div className="logo">My Portfolio</div>
+            <div className="logo">RYAN ARAFEH</div>
             <div className="icons">
+                <div className="profile-icon">⚙️</div>
                 <button onClick={toggleMute} className="mute-btn">
                     {muted ? '🔇' : '🔊'}
                 </button>
                 <div className="clock">
                     {time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
                 </div>
-                <div className="profile-icon">👤</div>
             </div>
         </div>
     );
