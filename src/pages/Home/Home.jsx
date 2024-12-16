@@ -52,8 +52,22 @@ function App() {
             '--active-card-size': `${ACTIVE_CARD_SIZE}px`,
             '--card-size': `${CARD_SIZE}px`,
         }}>
+            {/* Video Background */}
+            <video 
+                className="background-video" 
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+            >
+                <source src="/videos/background.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+            {/* Navbar */}
             <Navbar />
-            {/* Background */}
+
+            {/* Crossfader Background */}
             <CrossFader destroyOnFadeOutComplete={false} className={'game-bg-container ' + (isNext ? 'next' : 'prev')}>
                 <div className='game-bg' style={{ backgroundImage: `url("${games[active].bg ?? games[active].logo}")` }}></div>
             </CrossFader>

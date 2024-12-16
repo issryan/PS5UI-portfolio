@@ -1,5 +1,4 @@
 // Variables
-$primary-bg: radial-gradient(circle, rgba(20, 20, 20, 1) 50%, rgba(10, 10, 10, 1) 100%);
 $circle-size: 150px;
 
 // General Styles
@@ -8,7 +7,6 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: $primary-bg;
   font-family: 'Roboto', sans-serif;
   color: #fff;
   overflow: hidden;
