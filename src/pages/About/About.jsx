@@ -58,7 +58,7 @@ export default function About() {
                 <h2>Get in touch</h2>
                 <div className="contact-buttons">
                     <button className="resume-btn">
-                        <a href="/resume.docx" download>
+                        <a href="/ryanarafeh.resume.docx" download>
                             Download Resume
                         </a>
                     </button>
