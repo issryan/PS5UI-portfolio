@@ -6,12 +6,6 @@ export const games = [
         bg: ''
     },
     {
-        logo: '/games/gallery.png',
-        name: 'Gallery',
-        description: 'See some of my favorite pictures',
-        bg: ''
-    },
-    {
         logo: '/games/binge.png',
         name: 'BingeBuddy',
         description: 'TV Show Tracker & Rater',
@@ -34,5 +28,11 @@ export const games = [
         name: 'Shift Happens',
         description: "In Development",
         bg: ''
-    }
+    },
+    {
+        logo: '/games/gallery.png',
+        name: 'Gallery',
+        description: 'See some of my favorite pictures',
+        bg: ''
+    },
 ];
