@@ -1,5 +1,5 @@
 import React from 'react';
-import './FlickSummary.scss';
+import '../ProjectSummary.scss';
 import flickImage from '../../../assets/Flick.png';
 
 export default function FlickSummary() {

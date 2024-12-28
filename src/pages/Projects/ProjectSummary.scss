@@ -12,7 +12,7 @@
         max-width: 1100px;
         width: 100%;
         border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 20px 30px;
         background: transparent;
     }
@@ -24,13 +24,13 @@
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #fff; 
+            color: #fff;
         }
 
         .project-description {
             font-size: 1.1rem;
             line-height: 1.6;
-            color: #ddd; 
+            color: #ddd;
             margin-bottom: 20px;
         }
 
@@ -51,11 +51,13 @@
 
         .project-links {
             margin-top: 20px;
+            display: flex;
+            flex-direction: column; /* Makes buttons stack vertically */
+            gap: 15px; /* Adds spacing between buttons */
 
             .project-btn {
                 display: inline-block;
                 padding: 10px 20px;
-                margin-right: 10px;
                 border: none;
                 background: #3b82f6;
                 color: white;
@@ -92,6 +94,60 @@
             max-width: 100%;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    // Media Queries for Responsiveness
+    @media (max-width: 768px) {
+        .project-content {
+            flex-direction: column; /* Stacks content vertically */
+            gap: 20px; /* Adds spacing between text and image */
+            align-items: center; /* Centers content horizontally */
+        }
+
+        .project-image {
+            order: -1; /* Moves the image above the text */
+            margin-bottom: 20px; /* Adds spacing below the image */
+        }
+
+        .project-text {
+            .project-links {
+                gap: 10px; /* Adjusts button spacing for smaller screens */
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px;
+
+        .project-content {
+            padding: 15px;
+        }
+
+        .project-text {
+            .project-title {
+                font-size: 1.5rem;
+            }
+
+            .project-description {
+                font-size: 0.9rem;
+            }
+
+            .tech-stack .tech-label {
+                font-size: 0.8rem;
+                padding: 4px 8px;
+            }
+
+            .project-links .project-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        .project-image {
+            .project-thumbnail {
+                max-width: 100%;
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './BreedSummary.scss';
+import '../ProjectSummary.scss';
 import breedFinderImage from '../../../assets/BreedFinder.png';
 
 export default function BreedFinderSummary() {

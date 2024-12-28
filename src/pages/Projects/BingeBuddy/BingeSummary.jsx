@@ -1,5 +1,5 @@
 import React from 'react';
-import './BingeSummary.scss';
+import '../ProjectSummary.scss';
 import bingeBuddyImage from '../../../assets/BingeBuddy.png';
 
 export default function BingeBuddySummary() {

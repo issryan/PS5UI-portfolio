@@ -1,5 +1,5 @@
 import React from 'react';
-import './ShiftSummary.scss';
+import '../ProjectSummary.scss';
 import shiftHappensImage from '../../../assets/ShiftHappens.png'; 
 
 export default function ShiftHappensSummary() {
