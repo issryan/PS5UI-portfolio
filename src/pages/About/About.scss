@@ -6,6 +6,7 @@
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 100px;
 
   /* Main Content: About and Skills side-by-side */
   .about-main {
@@ -73,6 +74,7 @@
       display: flex;
       justify-content: center;
       gap: 1rem;
+      align-items: center;
 
       button {
         display: flex;
@@ -143,7 +145,7 @@
 
         button {
           width: 100%;
-          max-width: 300px; /* Ensures buttons don't stretch too much */
+          max-width: 300px;
         }
       }
     }

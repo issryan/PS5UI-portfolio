@@ -4,6 +4,7 @@
     align-items: center;
     padding: 40px 20px;
     text-align: left;
+    margin-bottom: 100px;
 
     .project-content {
         display: flex;
@@ -52,8 +53,8 @@
         .project-links {
             margin-top: 20px;
             display: flex;
-            flex-direction: column; /* Makes buttons stack vertically */
-            gap: 15px; /* Adds spacing between buttons */
+            flex-direction: column;
+            gap: 15px; 
 
             .project-btn {
                 display: inline-block;
@@ -100,19 +101,19 @@
     // Media Queries for Responsiveness
     @media (max-width: 768px) {
         .project-content {
-            flex-direction: column; /* Stacks content vertically */
-            gap: 20px; /* Adds spacing between text and image */
-            align-items: center; /* Centers content horizontally */
+            flex-direction: column; 
+            gap: 20px; 
+            align-items: center; 
         }
 
         .project-image {
-            order: -1; /* Moves the image above the text */
-            margin-bottom: 20px; /* Adds spacing below the image */
+            order: -1; 
+            margin-bottom: 20px; 
         }
 
         .project-text {
             .project-links {
-                gap: 10px; /* Adjusts button spacing for smaller screens */
+                gap: 10px; 
             }
         }
     }
