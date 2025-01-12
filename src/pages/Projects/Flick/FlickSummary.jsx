@@ -23,29 +23,29 @@ export default function FlickSummary() {
 
                     {/* Buttons */}
                     <div className="project-links">
-                        <a 
-                            href="https://github.com/project-flick/Flick" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                        <a
+                            href="https://github.com/project-flick/Flick"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="project-btn"
                         >
                             View GitHub Repo
                         </a>
-                        <a 
-                            href="/flick-details" 
+                       {/*  <a
+                            href="/flick-details"
                             className="project-btn learn-more"
                         >
                             Learn More
-                        </a>
+                        </a> */}
                     </div>
                 </div>
 
                 {/* Image Section */}
                 <div className="project-image">
-                    <img 
-                        src={flickImage} 
-                        alt="Flick Project" 
-                        loading="lazy" 
+                    <img
+                        src={flickImage}
+                        alt="Flick Project"
+                        loading="lazy"
                         className="project-thumbnail"
                     />
                 </div>

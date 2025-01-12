@@ -11,7 +11,7 @@ export default function BreedFinderSummary() {
                     <p className="project-description">
                         An AI-powered app designed to identify dog breeds based on user-uploaded images.
                         Leveraging a machine learning classification model, it provides accurate breed predictions while
-                        storing user submission history for easy review. The app combines an intuitive frontend with a 
+                        storing user submission history for easy review. The app combines an intuitive frontend with a
                         robust backend for a seamless experience.
                     </p>
 
@@ -26,29 +26,29 @@ export default function BreedFinderSummary() {
 
                     {/* Buttons */}
                     <div className="project-links">
-                        <a 
-                            href="https://github.com/issryan/BreedFinder" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                        <a
+                            href="https://github.com/issryan/BreedFinder"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="project-btn"
                         >
                             View GitHub Repo
                         </a>
-                        <a 
+                        {/* <a 
                             href="/breedfinder-details" 
                             className="project-btn learn-more"
                         >
                             Learn More
-                        </a>
+                        </a> */}
                     </div>
                 </div>
 
                 {/* Image Section */}
                 <div className="project-image">
-                    <img 
-                        src={breedFinderImage} 
-                        alt="BreedFinder Project" 
-                        loading="lazy" 
+                    <img
+                        src={breedFinderImage}
+                        alt="BreedFinder Project"
+                        loading="lazy"
                         className="project-thumbnail"
                     />
                 </div>

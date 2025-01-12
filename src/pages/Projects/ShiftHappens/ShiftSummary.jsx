@@ -1,6 +1,6 @@
 import React from 'react';
 import '../ProjectSummary.scss';
-import shiftHappensImage from '../../../assets/ShiftHappens.png'; 
+import shiftHappensImage from '../../../assets/ShiftHappens.png';
 
 export default function ShiftHappensSummary() {
     return (
@@ -10,7 +10,7 @@ export default function ShiftHappensSummary() {
                 <div className="project-text">
                     <p className="project-description">
                         Shift Happens is a shift scheduling web app for managers and employees. It's designed to simplify scheduling,
-                        resolve conflicts, and ensure teams are properly staffed. Currently under development, the app will feature 
+                        resolve conflicts, and ensure teams are properly staffed. Currently under development, the app will feature
                         automatic schedule generation, conflict detection, and a customizable dashboard.
                     </p>
 
@@ -29,21 +29,21 @@ export default function ShiftHappensSummary() {
                         >
                             View GitHub Repo
                         </a> */}
-                        <a 
-                            href="/shift-happens-details" 
+                       {/*  <a
+                            href="/shift-happens-details"
                             className="project-btn learn-more"
                         >
                             Learn More
-                        </a>
+                        </a> */}
                     </div>
                 </div>
 
                 {/* Image Section */}
                 <div className="project-image">
-                    <img 
-                        src={shiftHappensImage} 
-                        alt="Shift Happens Project" 
-                        loading="lazy" 
+                    <img
+                        src={shiftHappensImage}
+                        alt="Shift Happens Project"
+                        loading="lazy"
                         className="project-thumbnail"
                     />
                 </div>

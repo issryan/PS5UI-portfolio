@@ -37,12 +37,12 @@ export default function BingeBuddySummary() {
                         >
                             View GitHub Repo
                         </a>
-                        <a 
+                        {/* <a 
                             href="/bingebuddy" 
                             className="project-btn learn-more"
                         >
                             Learn More
-                        </a>
+                        </a> */}
                     </div>
                 </div>
 
